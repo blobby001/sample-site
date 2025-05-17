@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blobby's website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh; /* Ensure gradient covers full height */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            color: #fff; /* White text for better contrast on gradient */
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            animation: fadeInSlideUp 1s ease-out forwards;
+            opacity: 0; /* Start hidden for animation */
+        }
+
+        h2 {
+            color: #f0f0f0; /* Light grey for subheading */
+            font-size: 2em;
+            margin-bottom: 30px;
+            animation: fadeInSlideUp 1s ease-out 0.5s forwards; /* Delayed animation */
+            opacity: 0; /* Start hidden for animation */
+        }
+
+        h2 span {
+            /* Original green color kept as per initial code, but animated */
+            animation: colorCycle 5s infinite alternate;
+        }
+
+        @keyframes colorCycle {
+            0% { color: #2ecc71; } /* Green */
+            25% { color: #3498db; } /* Blue */
+            50% { color: #9b59b6; } /* Purple */
+            75% { color: #e67e22; } /* Orange */
+            100% { color: #e74c3c; } /* Red */
+        }
+
+
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            max-width: 700px;
+            width: 90%;
+            animation: fadeIn 1.5s ease-out forwards;
+            opacity: 0; /* Start hidden for animation */
+            text-align: center; /* Center text within the container */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .content-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+        }
+
+        .content-container img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+        }
+
+        .content-container p {
+            color: #555; /* Darker grey for paragraph text */
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: left; /* Align paragraph text to the left for readability */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Blobby's Day Out</h1>
+    <h2><span>B</span>lobby's Dress</h2>
+
+    <div class="content-container">
+        <img src="https://images.unsplash.com/photo-1726137569914-ae2ad1c634f6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8" alt="A scenic view from Unsplash" />
+        <p>My name is Blossom Idoko and I am a girl with random thoughts.</p>
+        <p>I am from Nsukka but I don't know what to say next. Exploring the world of web design is quite exciting!</p>
+    </div>
+</body>
+</html>
